@@ -1,0 +1,30 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/qiankun-main-react/node_modules
+/qiankun-sub-vue/node_modules
+/qiankun-sub-react/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/qiankun-main-react/build
+/qiankun-sub-vue/build
+/qiankun-sub-react/build
+/qiankun-main-react/dist
+/qiankun-sub-vue/dist
+/qiankun-sub-react/dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
