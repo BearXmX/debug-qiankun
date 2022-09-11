@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import RouteComponent from './App'
 
 import './index.css'
 import './public-path'
@@ -8,10 +8,10 @@ let root: ReactDOM.Root
 
 function render(props: any) {
   const { container } = props
-
+  console.log(props)
   root = ReactDOM.createRoot(container ? container.querySelector('#root') : (document.querySelector('#root') as HTMLElement))
 
-  root.render(<App />)
+  root.render(<RouteComponent />)
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
@@ -23,7 +23,6 @@ export async function bootstrap() {
 }
 
 export async function mount(props: qiankunHooksProps) {
-  console.log(props)
   render(props)
 }
 
