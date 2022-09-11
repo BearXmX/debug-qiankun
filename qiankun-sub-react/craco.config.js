@@ -1,9 +1,4 @@
-/*
- * @Date: 2022-05-01 14:16:00
- * @LastEditors: 熊明祥
- * @LastEditTime: 2022-05-04 16:48:32
- * @Description: 
- */
+const packageName = require('./package.json').name;
 const CracoLessPlugin = require("craco-less");
 const path = require('path')
 const themeColor = {
@@ -11,12 +6,21 @@ const themeColor = {
   '@gray-color': '#9da2ac'
 }
 
+const port = 8081
+
 module.exports = {
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
       'course': path.resolve(__dirname, 'src/course')
+    },
+    configure: (webpackConfig) => {
+      webpackConfig.output.library = `${packageName}-[name]`
+      webpackConfig.output.libraryTarget = 'umd'
+      webpackConfig.output.publicPath = `http://localhost:${port}/`
+      return webpackConfig;
     }
+
   },
   plugins: [
     {
@@ -31,4 +35,10 @@ module.exports = {
       }
     }
   ],
+  devServer: {
+    port: port,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  }
 }
