@@ -15,6 +15,17 @@ registerMicroApps([
       },
     },
   },
+  {
+    name: 'qiankun-sub-vue-app', // app name registered
+    entry: '//localhost:8082',
+    container: '#my-layout-content-inner',
+    activeRule: '/qiankun-sub-vue',
+    props: {
+      myInject: {
+        projectName: 'qiankun-sub-vue-app',
+      },
+    },
+  },
 ])
 
 const App: React.FC = () => {
