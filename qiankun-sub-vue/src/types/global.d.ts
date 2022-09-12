@@ -27,3 +27,17 @@ declare interface ICurrentUser {
 
 declare function A(params: string): string[]
 declare function A(params: number): number[]
+
+declare type qiankunHooksProps = {
+  container: HTMLElement | DocumentFragment
+  name: string
+  onGlobalStateChange: () => any
+  setGlobalState: () => any
+  myInject: {
+    projectName: string
+  }
+}
+
+declare interface Window {
+  __POWERED_BY_QIANKUN__: boolean
+}

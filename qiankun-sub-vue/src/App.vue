@@ -6,6 +6,8 @@ import { reactive, ref } from "vue";
 import type { CSSProperties } from "vue";
 import { uniq } from "lodash";
 
+import logo from "../public/vite.svg";
+
 console.log(uniq([1, 2, 1, 2, 3, 4, 5]), "uniq");
 
 const count = ref<number>(0);
@@ -37,16 +39,14 @@ onMounted(() => {
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
+    <img :src="logo" class="logo" alt="Vite logo" />
     <div :style="1 ? { marginBottom: '20px' } : css">
       <ElButton type="default" @click="addCount">ElButton</ElButton>
     </div>
     <div :style="css">计数: {{ count }}</div>
-    <div :style="css">
+    <!-- <div :style="css">
       userId: {{ currentUser.userId }} user: {{ currentUser.userName }}
-    </div>
+    </div> -->
   </div>
   <HelloWorld msg="Vite + Vue" other-msg="first-vite" />
 </template>
