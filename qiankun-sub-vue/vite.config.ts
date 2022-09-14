@@ -5,7 +5,6 @@ import qiankun from 'vite-plugin-qiankun'
 const port = 8082
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `http://localhost:${port}/`,
   plugins: [
     vue(),
     qiankun('qiankun-sub-vue', {
@@ -15,5 +14,6 @@ export default defineConfig({
   server: {
     port: port,
     open: true,
+    origin: `http://localhost:${port}/`,
   },
 })
