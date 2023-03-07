@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import qiankun from 'vite-plugin-qiankun'
 
-const port = 8082
+const port = 8083
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [

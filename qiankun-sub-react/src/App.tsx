@@ -4,11 +4,11 @@ import logo from './logo.svg'
 
 const routes = [
   {
-    name: 'main-route',
+    name: '跳转当前微应用 => /qiankun-sub-react',
     path: '/qiankun-sub-react',
   },
   {
-    name: 'other-route',
+    name: '跳转当前微应用 => /qiankun-sub-react',
     path: '/qiankun-sub-react/other-route',
   },
 ]

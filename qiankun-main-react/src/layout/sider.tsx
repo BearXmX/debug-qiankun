@@ -6,6 +6,10 @@ const siderList = [
     path: 'qiankun-sub-react',
   },
   {
+    name: 'qiankun-sub1-react',
+    path: 'qiankun-sub1-react',
+  },
+  {
     name: 'qiankun-sub-vue',
     path: 'qiankun-sub-vue',
   },

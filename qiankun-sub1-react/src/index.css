@@ -1,0 +1,38 @@
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100% !important;
+}
+
+body {
+  overflow: auto;
+  background-color: #f0f2f5 !important;
+}
+
+#root,
+.react-sub1-app {
+  height: 100%;
+}
+
+.react-sub1-app {
+  overflow: auto;
+}
+
+.middleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.marginBottom {
+  margin-bottom: 16px;
+}
